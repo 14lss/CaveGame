@@ -26,19 +26,19 @@ public class ChunkGenerator : MonoBehaviour
 
                     if (y == SurfaceY)
                     {
-                        ChunkData[x, y, z] = 1;
+                        ChunkData[x, y, z] = 1; // Grass
                     }
                     else if (y < SurfaceY && y > SurfaceY - 4)
                     {
-                        ChunkData[x, y, z] = 2;
+                        ChunkData[x, y, z] = 2; // Dirt
                     }
                     else if (y <= SurfaceY - 4 && y > 0)
                     {
-                        ChunkData[x, y, z] = 3;
+                        ChunkData[x, y, z] = 3; // Stone
                     }
                     else
                     {
-                        ChunkData[x, y, z] = 0;
+                        ChunkData[x, y, z] = 0; // Air
                     }
                 }
             }
@@ -139,7 +139,7 @@ public class ChunkGenerator : MonoBehaviour
                         }
 
 
-                        // Calculate triangles and UVs
+                        // Calculate triangles
                         int tl = Vertices.Count - 4 * NumFaces;
                         for (int i = 0; i < NumFaces; i++)
                         {
